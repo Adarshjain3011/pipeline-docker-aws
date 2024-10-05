@@ -37,6 +37,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             sudo docker pull adarshjain3011/week-18-class2:latest
-            sudo docker stop web-app || true
-            sudo docker rm web-app || true
+            sudo docker stop week-18-class2 || true
+            sudo docker rm week-18-class2 || true
             sudo docker run -d --name week-18-class2 -p 3005:3000 adarshjain3011/week-18-class2:latest
