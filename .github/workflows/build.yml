@@ -1,6 +1,9 @@
-name: Build on PR
+name: Build on PR and Push
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
@@ -18,9 +21,8 @@ jobs:
       - name: Install Dependencies
         run: npm install
       
-
-
+      - name: Generate prisma client
+        run: npm run db:generate
+        
       - name: Run Build
         run: npm run build
-
-
