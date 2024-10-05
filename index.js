@@ -32,8 +32,12 @@ app.post("/user",(req,res)=>{
 
 app.get("/count",(req,res)=>{
 
-    res.json({count: 100});
-    
+    res.json({count: 100,
+        message: "Data fetched successfully"
+        
+    });
+
+
 })
 
 
